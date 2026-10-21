@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Build against another pure::variants p2 update site with `-Dpurevariants.p2.url=<url>`; the target platform is split into `purevariants-5-base.target` (public dependencies) and `purevariants-5.target` (base + pure::variants).
 - Integration tests run in the Maven build with `-Dpurevariants.license.server=<url>` (pure::variants floating license server); without it they are compiled but skipped.
 - `CONTRIBUTING.md` (including how to run the tests in the IDE and with Maven) and `CHANGELOG.md`.
+- GitHub Actions workflow that builds the project and runs the unit tests for every push to `main` and every pull request.
 
 ### Changed
 - Licensed under the Eclipse Public License 2.0 (EPL-2.0).
