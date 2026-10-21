@@ -35,12 +35,14 @@ jobs:
             exit 1
           fi
 
+      # No Maven cache: ~/.m2/repository also contains the p2 artifacts of the
+      # commercial pure::variants SDK, and caches of main can be restored by
+      # workflow runs of pull requests from forks.
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
-          cache: maven
           server-id: artifacts.itemis
           server-username: ARTIFACTS_ITEMIS_USERNAME
           server-password: ARTIFACTS_ITEMIS_PASSWORD
