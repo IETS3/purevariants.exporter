@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?>
+<target name="purevariants-5" sequenceNumber="2">
+	<locations>
+
+		<location type="Target" uri="file:${project_loc:/de.itemis.purevariants.exporter.target}/purevariants-5-base.target"/>
+
+		<location includeAllPlatforms="false" includeConfigurePhase="false"
+			includeMode="planner" includeSource="true" type="InstallableUnit">
+			
+			<unit id="com.ps.consul.eclipse.purevariants.de.enterprise.feature.group" version="5.0.14.685" />
+			<unit id="com.ps.consul.eclipse.purevariants.feature.details.feature.group" version="5.0.14.685" />
+			<unit id="com.ps.consul.eclipse.purevariants.sdk.feature.group"	version="5.0.14.685" />
+			<unit id="com.ps.consul.eclipse.purevariants.vel.feature.group"	version="5.0.14.685" />
+			
+			<repository id="artifacts.itemis"
+				location="https://artifacts.itemis.cloud/repository/p2-private/purevariants/5.0.14" />
+		</location>
+
+	</locations>
+</target>

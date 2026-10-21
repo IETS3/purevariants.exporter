@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="de.itemis.purevariants.jaxb.libraries.feature"
+      label="JAXB Libraries for IETS3 Exporter"
+      version="3.0.1.qualifier"
+      provider-name="itemis AG">
+
+   <description>
+      JAXB and Jakarta Activation libraries required by the IETS3 Exporter.
+   </description>
+
+   <copyright>
+      Copyright (c) 2022-2026 itemis AG and others (feature packaging).
+The included JAXB and Jakarta Activation bundles are copyright of their respective owners.
+   </copyright>
+
+   <license url="https://www.eclipse.org/org/documents/edl-v10.php">
+      The feature packaging is made available under the terms of the Eclipse Public License 2.0
+(https://www.eclipse.org/legal/epl-2.0/), SPDX-License-Identifier: EPL-2.0.
+
+The included bundles jakarta.xml.bind, com.sun.xml.bind and javax.activation are
+made available under the terms of the Eclipse Distribution License 1.0
+(https://www.eclipse.org/org/documents/edl-v10.php), SPDX-License-Identifier: BSD-3-Clause.
+   </license>
+
+   <plugin
+         id="jakarta.xml.bind"
+         download-size="0"
+         install-size="0"
+         version="2.3.3.v20201118-1818"
+         unpack="false"/>
+
+   <plugin
+         id="com.sun.xml.bind"
+         download-size="0"
+         install-size="0"
+         version="2.3.3.v20201118-1818"
+         fragment="true"
+         unpack="false"/>
+
+   <plugin
+         id="javax.activation"
+         download-size="0"
+         install-size="0"
+         version="1.2.2.v20201119-1642"
+         unpack="false"/>
+
+</feature>

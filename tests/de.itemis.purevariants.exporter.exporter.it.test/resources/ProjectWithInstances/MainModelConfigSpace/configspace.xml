@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<cm:consulmodel xmlns:cm="http://www.pure-systems.com/consul/model" cm:id="idRzGu_XT16U7NtlS" cm:version="1.2" cm:type="ps:configspace"><cm:head></cm:head>
+<cm:elements cm:rootid="iJTmwS4DhLlb9TGd_"><cm:element cm:id="iJTmwS4DhLlb9TGd_" cm:class="ps:lookup"><cm:relations cm:id="ix9204baIne-UsTyU" cm:class="ps:models"><cm:relation cm:id="i-QZNV-JV960tshuL" cm:type="ps:used"><cm:target cm:id="i_p71-AK3eK4ghdTh">./i11_GZLDcUx5-fwb2</cm:target>
+</cm:relation>
+</cm:relations>
+<cm:properties><cm:property cm:id="iYRXib7BxJ5m5s6sc" cm:type="ps:path" cm:name="module_base"><cm:constant cm:id="ioSo_EnY6XzCwwmvF" cm:type="ps:path">$(WORKSPACE)</cm:constant>
+</cm:property>
+<cm:property cm:id="isaNCxQv3fVvebaCT" cm:type="ps:path" cm:name="input_url"><cm:constant cm:id="iGExKQKG35ZTDrm2t" cm:type="ps:path">$(PROJECT)/input</cm:constant>
+</cm:property>
+<cm:property cm:id="i4qOzB0qXnNK0T34p" cm:type="ps:path" cm:name="output_url"><cm:constant cm:id="isd_wnao7ZHOsx7lR" cm:type="ps:path">$(PROJECT)/output/$(VARIANT)</cm:constant>
+</cm:property>
+<cm:property cm:id="iPcDNWd1W30Wb8DtX" cm:type="ps:file" cm:name="transform_log"><cm:constant cm:id="iK4A4U5vwy5fbwPgA" cm:type="ps:file">$(OUTPUT)/$(VARIANT).log</cm:constant>
+</cm:property>
+<cm:property cm:id="i2F8CDsSh4EAXnCIO" cm:type="ps:path" cm:name="transform_module"><cm:constant cm:id="iN8YkvJbqynyPxpTv" cm:type="ps:path">$(PROJECT)/MainModelConfigSpace/moduleconfig.xml</cm:constant>
+</cm:property>
+<cm:property cm:id="iE3sOaqo5dC_N994h" cm:type="ps:string" cm:name="clear_dir"><cm:constant cm:id="iSskfhAJ1aVilNRhK" cm:type="ps:string">true</cm:constant>
+</cm:property>
+<cm:property cm:id="ild2-0N3jSSBd7I7S" cm:type="ps:string" cm:name="conf_clear_dir"><cm:constant cm:id="iRZRiLDePwIlCLeDX" cm:type="ps:string">true</cm:constant>
+</cm:property>
+<cm:property cm:id="icfYIUDqnfdvOWenw" cm:type="ps:string" cm:name="create_dir"><cm:constant cm:id="iDTQ-kInph3eNj4JP" cm:type="ps:string">true</cm:constant>
+</cm:property>
+<cm:property cm:id="ihfbGYqnoMmJouh25" cm:type="ps:string" cm:name="conf_create_dir"><cm:constant cm:id="iBSgr1bz0Nd3wFvtZ" cm:type="ps:string">true</cm:constant>
+</cm:property>
+<cm:property cm:id="iBjMK9i_aL3TISzds" cm:type="ps:string" cm:name="recover"><cm:constant cm:id="iW9_XcQ3RQTCDTDCX" cm:type="ps:string">true</cm:constant>
+</cm:property>
+</cm:properties>
+</cm:element>
+<cm:element cm:id="i11_GZLDcUx5-fwb2" cm:name="iW62J0nO34wBF7xAG" cm:type="ps:used" cm:class="ps:model"><cm:properties><cm:property cm:id="i-eds-_rwndERA7TQ" cm:type="ps:string" cm:name="model_type"><cm:constant cm:id="iG9z0R28_IJnbhCOX" cm:type="ps:string">ps:fm</cm:constant>
+</cm:property>
+<cm:property cm:id="iAvjWdfa7F8tFJqKK" cm:type="ps:path" cm:name="model_path"><cm:constant cm:id="ikIE7OXs5yIEaWSyD" cm:type="ps:path">$(PROJECT)/MainModel.xfm</cm:constant>
+</cm:property>
+<cm:property cm:id="iL7Fg_BLRvlSwWxid" cm:type="ps:integer" cm:name="model_rank"><cm:constant cm:id="i6VgKPQG3uEqH9pOQ" cm:type="ps:integer">1</cm:constant>
+</cm:property>
+</cm:properties>
+</cm:element>
+</cm:elements>
+</cm:consulmodel>

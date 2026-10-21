@@ -1,0 +1,865 @@
+<cm:consulmodel xmlns:cm="http://www.pure-systems.com/consul/model" cm:id="iHvvVt224NepEaiPb" cm:version="1.7" cm:type="ps:fm">
+  <cm:head>
+    <cm:properties>
+      <cm:property cm:id="iMi6EzP1qO0Vehk8o" cm:type="ps:string" cm:invisible="true" cm:name="ps:name">
+        <cm:constant cm:id="ilc85AhJ9IGHtVplr" cm:type="ps:string">MainModel</cm:constant>
+      </cm:property>
+      <cm:property cm:id="iaeQ6uY14LnVATYqW" cm:type="ps:string" cm:invisible="true" cm:name="ps:author">
+        <cm:constant cm:id="ib7xjOnP-llDMHfqs" cm:type="ps:string">johndoe</cm:constant>
+      </cm:property>
+      <cm:property cm:id="iAgiQ2hioPY6Zfguj" cm:type="ps:string" cm:invisible="true" cm:name="ps:version">
+        <cm:constant cm:id="iD5AxWjU_OqxXl0sZ" cm:type="ps:string">1.0</cm:constant>
+      </cm:property>
+      <cm:property cm:id="inylLWAdRSC0UCbgd" cm:type="ps:datetime" cm:invisible="true" cm:name="ps:created">
+        <cm:constant cm:id="i6Xt_mvAC4X9D5mpu" cm:type="ps:datetime">2022-06-22T06:39:38.672Z</cm:constant>
+      </cm:property>
+      <cm:property cm:id="icQHbZmpK_Xo5rf65" cm:type="ps:mimetype" cm:invisible="true" cm:name="ps:DescriptionType">
+        <cm:constant cm:id="iFqUJuXG3cIGCHkmI" cm:type="ps:mimetype">text/html</cm:constant>
+      </cm:property>
+    </cm:properties>
+  </cm:head>
+  <cm:restrictions>
+    <cm:restset cm:id="i2mBj8lCHRwMpROH-" cm:constraint="true">
+      <cm:restriction cm:id="ifFbF6W6FC7Vb4qA-">
+        <cm:script cm:id="iqwf16GTU4c1R2drU" cm:language="ps:pvscl" cm:type="ps:boolean">SELF requires :AnOptionalFeature</cm:script>
+      </cm:restriction>
+    </cm:restset>
+    <cm:restset cm:id="idEZJR4xIuhrzavBf" cm:constraint="true">
+      <cm:restriction cm:id="iXz__OHxI02Srsf6W">
+        <cm:script cm:id="iD-zPkGo7WIcqI5Oo" cm:language="ps:pvscl" cm:type="ps:boolean">:FeatureWithConstraintUsingAbsolutePathName implies :AnOptionalFeature</cm:script>
+      </cm:restriction>
+    </cm:restset>
+    <cm:restset cm:id="iI0EF5tzoU5GwmJkK" cm:constraint="true">
+      <cm:restriction cm:id="iXI6pZoMV3GpreJj2">
+        <cm:script cm:id="iN2vjwHpocn2_4FFi" cm:language="ps:pvscl" cm:type="ps:boolean">CONTEXT implies :AnOptionalFeature</cm:script>
+      </cm:restriction>
+    </cm:restset>
+    <cm:restset cm:id="iS2FA_p-SCpbcSjQz">
+      <cm:restriction cm:id="iWmyvRdqCR64aH2tv">
+        <cm:script cm:id="i7PGDWz5xt1lqPxiy" cm:language="ps:pvscl" cm:type="ps:boolean">SELF implies AnotherLocalFeature</cm:script>
+      </cm:restriction>
+    </cm:restset>
+  </cm:restrictions>
+  <cm:elements cm:rootid="i8IB2GBDUVebVlyCv">
+    <cm:element cm:id="i8IB2GBDUVebVlyCv" cm:name="MainModel" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="imwdEz0PrKHlbfSe_" cm:class="ps:children">
+        <cm:relation cm:id="iSMBWL-G6fWPTwmqs" cm:type="ps:mandatory" cm:range="n">
+          <cm:target cm:id="i-wKiBeGrNPHCAkem">./i7FVEtXTUtObjQQNo</cm:target>
+          <cm:target cm:id="iI07NxIQI2qWWQL0L">./i6dAHDBF6BCqOk6Pp</cm:target>
+          <cm:target cm:id="ilEKIxtH-R8ueq1vt">./ipINKL0EVtuZMDZ-5</cm:target>
+          <cm:target cm:id="iiA1UyGzUjbmV1Zle">./iyT6BFkLPn7kT3AUp</cm:target>
+          <cm:target cm:id="ijF1g77tIafyORNGw">./ifeTYZLL0iSW-_ods</cm:target>
+          <cm:target cm:id="ihialk4ESheXdCSdV">./i8vnkIYZaw0sJ2aam</cm:target>
+          <cm:target cm:id="iTsIYhJ50tUUXyVoO">./iNCF1FzZDON0LTit6</cm:target>
+          <cm:target cm:id="isBfLQQIbQIhBHhqf">./id1ZTe_h6_4j4k7nO</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="i_rNwksRTpCcbQVcU" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="i0xO7ljKYsl8yDmzd" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iWTje1gmpYWg8s8zj" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iZRhnZhZ_KFTI3K5Q" cm:type="ps:datetime">2022-06-22T06:39:38.671Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iwPQeNxZJ2oY5Asf5" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="ie5nnKnyudlLwIsVh" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="idZ3l_KFEezrEMBfE" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iiKyvXyQAC58yQzO9" cm:type="ps:datetime">2025-03-28T19:24:37.768Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="i3mj23raxHB76F3Oc" cm:name="AnMandatoryFeature" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iK-9_tUVbKRDRMvkC" cm:class="ps:parents">
+        <cm:relation cm:id="iGdXopODDSydyZjHH" cm:type="ps:parent">
+          <cm:target cm:id="iE3tDfMkSFPjFKuEp">./i7FVEtXTUtObjQQNo</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iNsGsVvkS02QS058V" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="i-Sx8PKsc0l8CrQ44" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iXHdApaNYYN7ttj-6" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ifEISQ1nNQXYewKCd" cm:type="ps:datetime">2022-06-22T06:40:36.057Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ihKIUtgck1MUEZnbX" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iyvoP0lN4KeRGAt5J" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i7_6KY8VOvkx6Eaak" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="ic4MGzYv9zA8HWkQW" cm:type="ps:datetime">2022-06-22T06:40:36.057Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iY_4Puc8Yt4VZY3Yc" cm:name="AnOptionalFeature" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="isVzct4GkHMZ8gZUl" cm:class="ps:parents">
+        <cm:relation cm:id="icXDf1k1dQVZdp_QQ" cm:type="ps:parent">
+          <cm:target cm:id="iArOPKWFctl5PozHS">./iyT6BFkLPn7kT3AUp</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="itCPif2pW9zCeDFwo" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iiigsQdPgwHqZonm-" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iI5L5z1mTtZgGw8vL" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iIs_ExCKDlUAbPvPS" cm:type="ps:datetime">2022-06-22T06:40:47.514Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i7tO0rDlQbe4gGCyG" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="itM0J1pV7ZI3RUqGb" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iukXVFco-IWTGxiJ4" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iFmlgj_w9wXhWitnv" cm:type="ps:datetime">2022-09-20T10:40:24.655Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iEc3TB4EwE7pTIzpi" cm:name="FeatureWithAlternatives" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="ipAojQO1H2oNlE61H" cm:class="ps:children">
+        <cm:relation cm:id="ix7ldbrgXEBiYRpQo" cm:type="ps:alternative" cm:range="1">
+          <cm:target cm:id="iAH65KfXMhBpRWJRC">./ia5hT2PJzZvqNoSJv</cm:target>
+          <cm:target cm:id="i96qiyFbf_FiQi7a7">./idDME9Y02KU5Khg_J</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="ik3SlAUm7VX70EFnJ" cm:class="ps:parents">
+        <cm:relation cm:id="i3JtkDw-BS4DwiZR5" cm:type="ps:parent">
+          <cm:target cm:id="ivsjlRBn206on0jV4">./i7FVEtXTUtObjQQNo</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="i75wwCnU95oezaq1E" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iXi_0REMTUOYmBCmM" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iYShRWNlBcW4kpQsH" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i8i9pW-mFcZ5HMiPc" cm:type="ps:datetime">2022-06-22T06:41:18.986Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iIQ1hveY1vHnU0zuw" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iOCL_aGsEM9e4IqLc" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iZCzPfEliQ2GtykZH" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="in3p9vf3swebOQ1uW" cm:type="ps:datetime">2022-06-22T06:41:56.791Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="ia5hT2PJzZvqNoSJv" cm:name="FirstAlternative" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="ipKCuAIWWn9XBU8bf" cm:class="ps:parents">
+        <cm:relation cm:id="iqsYpg6kd73GagYVi" cm:type="ps:parent">
+          <cm:target cm:id="iDuiVf16V1ROJDZ9v">./iEc3TB4EwE7pTIzpi</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="ib9HJzNSxCaxzxlqK" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iSoz4NYQFnlv1qJgU" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i7d6MkciwAyUbObiI" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="idguLrFRVYXNIw5k_" cm:type="ps:datetime">2022-06-22T06:41:42.960Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iMZD69OMtUw6vt6uj" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="ivBuZGeAUtohDg_7B" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iclCPPcfuCutr3lju" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iSyZkVcx-iKWJwpid" cm:type="ps:datetime">2022-09-20T10:40:00.802Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="idDME9Y02KU5Khg_J" cm:name="SecondAlternative" cm:type="ps:feature" cm:class="ps:feature" cm:default="off">
+      <cm:relations cm:id="iyVbt9og56BB51H-e" cm:class="ps:parents">
+        <cm:relation cm:id="ipfayACbBT0rjP_8Q" cm:type="ps:parent">
+          <cm:target cm:id="iDMqGiF2eQMbr8zVL">./iEc3TB4EwE7pTIzpi</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iNEnrDQUvXLRf7tyP" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="ipZcvUiRUn-25PljN" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ipZN0-uZGpudhE9A9" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iInAfDdv8bo5Shltg" cm:type="ps:datetime">2022-06-22T06:41:56.791Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iwqyWTQuCeh2zluFr" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iOAOrss0iiz-y8vZ5" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iuButs7lpGDLgWuhZ" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i-O8GUL7CHJSpcsJQ" cm:type="ps:datetime">2022-06-22T06:41:56.791Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="i3i_5ih8t8Q2CsP5O" cm:name="FeatureWithOrFeatures" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="ijwztGv58pq4WNFNO" cm:class="ps:children">
+        <cm:relation cm:id="im5JrDc5We1eZDYmK" cm:type="ps:or" cm:range="[1,n]">
+          <cm:target cm:id="iTbTYH2T0ExAEOyRR">./iS8WOKpr0bhpaZ0-z</cm:target>
+          <cm:target cm:id="ikbiNl1CoDgU1uQVz">./ilAJXohIj1KOvFueI</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="izJL4kZniFedRctxD" cm:class="ps:parents">
+        <cm:relation cm:id="icMNITtIup1x9AQis" cm:type="ps:parent">
+          <cm:target cm:id="iVPmp75lCYd0QHD6O">./i7FVEtXTUtObjQQNo</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iW7svkv_KjYrs_fWY" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="it3OkHkQt8M3LK2pD" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ijJNRJmHhH7YtBZ9S" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iW9wyVw2OGPwi_19Q" cm:type="ps:datetime">2022-06-22T06:42:29.157Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ii-1FmIzCeA4yghqb" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iiZOCb5rfRzK3uXK2" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iaGSnJWTPh7rngzRs" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iAeuquy6lpgedlEyB" cm:type="ps:datetime">2022-06-22T06:42:51.522Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iS8WOKpr0bhpaZ0-z" cm:name="FirstOr" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iCt1HgNQJxlZPez1U" cm:class="ps:parents">
+        <cm:relation cm:id="iQ3_fGceY9mvf15AM" cm:type="ps:parent">
+          <cm:target cm:id="ip8kCiurdyHkvZoug">./i3i_5ih8t8Q2CsP5O</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iAEyxVOHxwg7HwDjs" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iQdbBhXoi6al4DF_K" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ilN0_O11AL05gL2BB" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ioii_EZkrvp5sYE2L" cm:type="ps:datetime">2022-06-22T06:42:43.422Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i_ot_NmsVeKQgFqeU" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="if-_TubAFn1lV0T6Y" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i3Kw1LlGerAEMCKNC" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iTFFGh2d_itMxcdRy" cm:type="ps:datetime">2022-09-20T10:40:10.092Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="ilAJXohIj1KOvFueI" cm:name="SecondOr" cm:type="ps:feature" cm:class="ps:feature" cm:default="off">
+      <cm:relations cm:id="iWG-ZPNiPG0It1ijc" cm:class="ps:parents">
+        <cm:relation cm:id="iUYNumzNfsxc37oiq" cm:type="ps:parent">
+          <cm:target cm:id="iOSXS5-acCGb0kwsy">./i3i_5ih8t8Q2CsP5O</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="ik2wUQBI0OWM_QNFU" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iEew4avackt4onpcg" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ih7GfA-0CWExlifpe" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iezTH6q5lxADyNGJ5" cm:type="ps:datetime">2022-06-22T06:42:51.522Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iAY1g15O8975Dz1On" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="ii7KC9RtIFVGJgE47" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i15MaGKT64qI0KQLG" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="ixC_xI8X4OdGvee1i" cm:type="ps:datetime">2022-06-22T06:42:51.522Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iEt4z42ZqgCW7_wga" cm:name="AnFeatureWithAttributes" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iWdZd5yd6Lfh527bf" cm:class="ps:parents">
+        <cm:relation cm:id="iWNJIZuRa4x0BQ1xW" cm:type="ps:parent">
+          <cm:target cm:id="iNeoekW30_KWTmkQJ">./i7FVEtXTUtObjQQNo</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iF4__ZZK7PmeT7HSu" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="icR4U8mf8rCfNqst2" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iQwl8Fdfm4oSEonLF" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iFQa9Z2ZmfQ0L2Bjc" cm:type="ps:datetime">2022-06-22T06:43:25.439Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="immyhjfcelPYKJwgk" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="icIqEmpCr2G6-rolL" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="itma05VqVBtZkFUGM" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="in78v6dW0yuRGuUa0" cm:type="ps:datetime">2024-10-16T14:09:15.521Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iMMk5RqjVv1he_Q3d" cm:type="ps:integer" cm:fixed="true" cm:name="anIntegerAtt">
+          <cm:constant cm:id="i4k_1xvyBXs8qK1Is" cm:type="ps:integer">111</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i9vz8X5H1Apy9_9VP" cm:type="ps:integer" cm:fixed="true" cm:name="inclusiveAtt" cm:range="[2,8]">
+          <cm:constant cm:id="ir0ICKHC9Jm7YieGa" cm:type="ps:integer">5</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iy6Ml7MqWOR9lEJWU" cm:type="ps:integer" cm:fixed="true" cm:name="openAtt" cm:range="[5,*]">
+          <cm:constant cm:id="ivlXl4P8Sqvi0rJJb" cm:type="ps:integer">11</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ijb-bV-GSmSgR0oQz" cm:type="ps:integer" cm:fixed="true" cm:name="exclusiveAtt" cm:range="(5,30)">
+          <cm:constant cm:id="icwBDb5YZPtmr7w6A" cm:type="ps:integer">22</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ik3bqd0zn3aIUWr2E" cm:type="ps:string" cm:fixed="true" cm:name="aStringAtt">
+          <cm:constant cm:id="iq6KhzCqGaHml1rLR" cm:type="ps:string">SomeStringValue</cm:constant>
+        </cm:property>
+        <cm:property cm:id="igpn9tRvy34t9OQcj" cm:type="ps:boolean" cm:fixed="true" cm:name="aBooleanAtt">
+          <cm:constant cm:id="i6wkrSmvdRBOXxTb7" cm:type="ps:boolean">true</cm:constant>
+        </cm:property>
+        <cm:property cm:id="isYTMiF1pusWcnWgV" cm:type="ps:float" cm:fixed="true" cm:name="aFloatAtt">
+          <cm:constant cm:id="iDooLwGFBUcQmExz7" cm:type="ps:float">111.222</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iizFpRPe86Bf7McS0" cm:type="ps:integer" cm:inheritable="true" cm:name="anInheritableAtt">
+          <cm:constant cm:id="imOteAEculbwfjWCc" cm:type="ps:integer">111</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iaz5LRiIF8SiewFqE" cm:type="ps:integer" cm:fixed="true" cm:name="anHexadecimalAtt">
+          <cm:constant cm:id="isBxaojYbL8zSF4ms" cm:type="ps:integer">0xAA</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="i2a2xTi8In27jgpBN" cm:name="ReferencesToSomeInstanceDefiningModel" cm:type="ps:instance" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iChT6k08t92ukR836" cm:class="ps:parents">
+        <cm:relation cm:id="iv_LbqqkePXCIVMXf" cm:type="ps:parent">
+          <cm:target cm:id="ioVvPsb27S_WvqEt8">./ifeTYZLL0iSW-_ods</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="i6RLzTPmrxWyyZfrd" cm:type="ps:string" cm:invisible="true" cm:fixed="true" cm:readonly="true" cm:name="ps:configspaceid">
+          <cm:constant cm:id="ixXxEY92UyD7jDvAk" cm:type="ps:string">imSHG_Qs9TbAE8PdE</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iTtLRziGerJNb5RfA" cm:type="ps:path" cm:invisible="true" cm:fixed="true" cm:readonly="true" cm:name="ps:configspacepath">
+          <cm:constant cm:id="i2sDu4Rx85SfZMRcc" cm:type="ps:path">$(PROJECT:AcceptanceTestModel)/InstancesConfigSpaces/SomeInstanceDefiningModel_CS/configspace.xml</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i9bNWXp8k7IV8KKxo" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iFYxm-dFCQ30nH-j5" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ifje5I42Fye_QDdnd" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iAoLPvY904g8-w1al" cm:type="ps:datetime">2022-07-15T08:48:29.058Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iWfAcidPSs69j8UZy" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iFVpTOE3ugJuQ2AMn" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="imLoRRnaX84EMpVRt" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iwXU5T_4wgZg_4J-Z" cm:type="ps:datetime">2022-08-05T14:12:24.927Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="i4mmTUxanApK329x7" cm:name="ReferencesToAnotherInstanceDefiningModel" cm:type="ps:instance" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iy3ZFc7MNj9G_wBOI" cm:class="ps:parents">
+        <cm:relation cm:id="i33GNKthn2Dt1Qo2B" cm:type="ps:parent">
+          <cm:target cm:id="i0sS5_IuRIkOqOhP_">./ifeTYZLL0iSW-_ods</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="ia-B-i1MBlYMqygVJ" cm:type="ps:string" cm:invisible="true" cm:fixed="true" cm:readonly="true" cm:name="ps:configspaceid">
+          <cm:constant cm:id="iWJin1VrALlTuULdB" cm:type="ps:string">iCGjaWZqsvEP-LTML</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iyIkluv7MMwHXGMJX" cm:type="ps:path" cm:invisible="true" cm:fixed="true" cm:readonly="true" cm:name="ps:configspacepath">
+          <cm:constant cm:id="iYNeFGQRUyDCBpB68" cm:type="ps:path">$(PROJECT:AcceptanceTestModel)/InstancesConfigSpaces/AnotherInstanceDefiningModel_CS/configspace.xml</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iHKukcfCC4BMnoitZ" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iqf7JNIr4GOGHZXvM" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i9ZAXHTo6KaeDZv1J" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iv78drt_3OvXik7qJ" cm:type="ps:datetime">2022-07-15T08:49:56.425Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iEZUUZOCiqSksusiz" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="ieGkDymbb28LFsRas" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ip68OhIRsu9saJGIj" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="ilrO7NLuiUw0U1uHZ" cm:type="ps:datetime">2022-08-05T14:12:24.928Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="i0PFnB38tzmAOMgoW" cm:name="FeatureWithSelfConstraint" cm:type="ps:feature" cm:class="ps:feature" cm:constraint="i2mBj8lCHRwMpROH-">
+      <cm:relations cm:id="iibE_PfWSPI6OX2rY" cm:class="ps:children">
+        <cm:relation cm:id="i08qBr9PLnrPxnr_v" cm:type="ps:optional">
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="i217OgDfx3bQnQSrJ" cm:class="ps:parents">
+        <cm:relation cm:id="in2HJvoPhIpSvZItj" cm:type="ps:parent">
+          <cm:target cm:id="iswF6T_mcaT8LvE0j">./iyT6BFkLPn7kT3AUp</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iua1jxZe5p_argO4b" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="irW1juRNVZ-ns95Ul" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i3HOEHAZE_u3iNK8_" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="imvZyXCBrj1SqV2MG" cm:type="ps:datetime">2022-07-15T08:55:22.611Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iKaRYDRcEtjvu0OwN" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="il5r5Rsls_siYbU4-" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i6yty8mH4vLIwOf-Z" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iXBM5n-7NbB_RyvLH" cm:type="ps:datetime">2022-07-20T07:42:37.956Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iZ5-UCVf6H8RpsDw7" cm:name="FeatureWithConstraintUsingAbsolutePathName" cm:type="ps:feature" cm:class="ps:feature" cm:default="off" cm:constraint="idEZJR4xIuhrzavBf">
+      <cm:relations cm:id="iAVaB4bbktZ23Aw2H" cm:class="ps:parents">
+        <cm:relation cm:id="ismf1e9x6ugBGv0so" cm:type="ps:parent">
+          <cm:target cm:id="iR548SBqC_vLS4Euz">./iyT6BFkLPn7kT3AUp</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="irpJ5-pk84I79NUAk" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="izOKG7pTPdoPHQ7Qs" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i74FmerZPGUMdruEk" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="isoC5opgiAFbd7dNe" cm:type="ps:datetime">2022-07-20T07:37:09.644Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iZ1nhBv3cHMIiLJ_0" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="inN0-oA_HybSACuDV" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iSb7-_QJuMSUcaFTB" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i07GO0W-ORCbgkSAx" cm:type="ps:datetime">2022-07-20T07:43:11.015Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iLH4cgwXxASncu4y2" cm:name="FeatureWithContextConstraint" cm:type="ps:feature" cm:class="ps:feature" cm:default="off" cm:constraint="iI0EF5tzoU5GwmJkK">
+      <cm:relations cm:id="if35e9y_9_Q90bt-Z" cm:class="ps:parents">
+        <cm:relation cm:id="iRXnomyoV3SwCTbCw" cm:type="ps:parent">
+          <cm:target cm:id="iJRkOaK2tU6inyuKI">./iyT6BFkLPn7kT3AUp</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iXW-sTfUdbEUE9Ygz" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iWHuqvPU8hKP6t8nb" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iFTxIo1CLS_hVSgB6" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iFDbYbVwNjh2OSKr4" cm:type="ps:datetime">2022-07-20T07:43:56.531Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iwZkhxzUYrqABGSvI" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="imhj-vVWNQ6SlbFMD" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i-8mGV1w-CyatJ9Fa" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="ipNMF6aSWjILSUcCe" cm:type="ps:datetime">2022-07-20T07:44:18.010Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iyT6BFkLPn7kT3AUp" cm:name="ConstraintsExamples" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iRnnsdTeFZlbM1PJq" cm:class="ps:children">
+        <cm:relation cm:id="inK5h1JHRsX1FBHkb" cm:type="ps:optional">
+          <cm:target cm:id="i8fnhUDl-sCCN0mYB">./iY_4Puc8Yt4VZY3Yc</cm:target>
+          <cm:target cm:id="iNGTExMuiCuwdRK0x">./i0PFnB38tzmAOMgoW</cm:target>
+          <cm:target cm:id="iKw0eKP2ECCrokQON">./iLH4cgwXxASncu4y2</cm:target>
+          <cm:target cm:id="ihBELMU6jcJZ4Knpm">./iZ5-UCVf6H8RpsDw7</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="ib5x3rk8AVIYdYH_1" cm:class="ps:parents">
+        <cm:relation cm:id="i8LvhrQOMmciuQeQF" cm:type="ps:parent">
+          <cm:target cm:id="ixZ-I5364Ap41BwQ5">./i8IB2GBDUVebVlyCv</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="inyETnylFQXvLBqS2" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iIA1hb589VIHRZQcD" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iVvuLKGFgN8usFYuV" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ik8h3g88xuMkgNAzi" cm:type="ps:datetime">2022-07-27T10:52:24.476Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ivh8OdRcPrq7zgVB1" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="igf1X3zSR71xOLhFe" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iCSBFR6RZnkzyrY9X" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iDA_L2DDEcQTaHTfQ" cm:type="ps:datetime">2022-07-28T12:29:40.616Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="il4KOCKz91m0od68u" cm:name="SomeInflexibleReferenceToSomeSubmodel" cm:type="ps:variant" cm:class="ps:feature" cm:default="off">
+      <cm:relations cm:id="iO55TLmb_rzVHknsj" cm:class="ps:parents">
+        <cm:relation cm:id="iQB6LUzlf5m_G8it5" cm:type="ps:parent">
+          <cm:target cm:id="isIPt3GmtThbzi8x7">./i8vnkIYZaw0sJ2aam</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iwDgF0i5Rq_K3DFnN" cm:type="ps:string" cm:invisible="true" cm:fixed="true" cm:readonly="true" cm:name="ps:vdmid">
+          <cm:constant cm:id="iysfK65GWKodfLDpg" cm:type="ps:string">is1Dw5EWJHYWrTKZN</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ioDzGi0eZfVg6Ej9o" cm:type="ps:path" cm:invisible="true" cm:fixed="true" cm:readonly="true" cm:name="ps:vdmpath">
+          <cm:constant cm:id="iiwnviQUSUwtGvjJV" cm:type="ps:path">$(PROJECT:AcceptanceTestModel)/SubmodelsConfigSpaces/SomeSubmodel_CS/VariantOfSomeSubmodel.vdm</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iLacPKpIwSgKlU_tN" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="ipv8QBqHmlLgPCLqv" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iBSs8EV5jIw7U6pNJ" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i-YwtXEJJsnh6fgXc" cm:type="ps:datetime">2022-07-27T16:24:58.782Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iuTwM2NdjyobXQp7t" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="ix7I-ms4ygT6BezV5" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iBPiY7vWQZ1Kjtoi9" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i2zblRRSz9h25ZB2f" cm:type="ps:datetime">2022-08-05T14:12:37.679Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iA-vG2t8uygkxBBTt" cm:name="AnotherInflexibleReferenceToSomeSubmodel" cm:type="ps:variant" cm:class="ps:feature" cm:default="off">
+      <cm:relations cm:id="ilzcGPomdf1oJcYPf" cm:class="ps:parents">
+        <cm:relation cm:id="ispGl8o1YJeKfuGFm" cm:type="ps:parent">
+          <cm:target cm:id="iOxb0Q9CRgUKvfGyb">./i8vnkIYZaw0sJ2aam</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iGtCcIcTRTY88ch-7" cm:type="ps:string" cm:invisible="true" cm:fixed="true" cm:readonly="true" cm:name="ps:vdmid">
+          <cm:constant cm:id="iA5mskCo91BomJQu1" cm:type="ps:string">is1Dw5EWJHYWrTKZN</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i46R1PHzU-FMaOnF_" cm:type="ps:path" cm:invisible="true" cm:fixed="true" cm:readonly="true" cm:name="ps:vdmpath">
+          <cm:constant cm:id="iHLDR_Vw7Qg-3FyF5" cm:type="ps:path">$(PROJECT:AcceptanceTestModel)/SubmodelsConfigSpaces/SomeSubmodel_CS/VariantOfSomeSubmodel.vdm</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ikMc6XJ8AKK9Hn-t-" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="if9OBs8zGRmBO7ABo" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i9SxFYItsvfgUoPBR" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ihMFqlvdXIQ2EeMHc" cm:type="ps:datetime">2022-07-27T16:25:34.542Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ibyQ79luGJjtud72V" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="i_pB7xH9wA3l5vz-s" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i5eJ0-6d5kXoxAGMW" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iBfN6b7S91vMAInKY" cm:type="ps:datetime">2022-08-05T14:12:37.680Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iSDDmIG6B5kA48a_J" cm:name="SomeInflexibleRefernceToAnotherSubmodel" cm:type="ps:variant" cm:class="ps:feature" cm:default="off">
+      <cm:relations cm:id="i--rpsznoc62fCg71" cm:class="ps:parents">
+        <cm:relation cm:id="iJhxiFoLHY8M3L2FR" cm:type="ps:parent">
+          <cm:target cm:id="iWv5NJN5BhqNPHuzf">./i8vnkIYZaw0sJ2aam</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iVZrddVIYc4S5xYq1" cm:type="ps:string" cm:invisible="true" cm:fixed="true" cm:readonly="true" cm:name="ps:vdmid">
+          <cm:constant cm:id="ieoEv9XRGE2VIqhJM" cm:type="ps:string">i_CYtuDcr14MAo40P</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i532sr1dtmeAEJuJP" cm:type="ps:path" cm:invisible="true" cm:fixed="true" cm:readonly="true" cm:name="ps:vdmpath">
+          <cm:constant cm:id="i3MIOURPjeTZhBFp9" cm:type="ps:path">$(PROJECT:AcceptanceTestModel)/SubmodelsConfigSpaces/AnotherSubmodel_CS/VariantOfAnotherSubmodel.vdm</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iseS-RhwwPlSJfbLC" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="id5xmD2Dg9ATt1y-H" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ijtrVIn975qcIcu5S" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i6-SW0wJvBA2sTwhw" cm:type="ps:datetime">2022-07-28T10:43:44.488Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iaEWbhGxgUQuSm2_Q" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="i81PzZkIdDs9mVdPj" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ipIddUohgitmfEkZa" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="if0wNwrhZIv3LL0vZ" cm:type="ps:datetime">2022-08-05T14:12:37.680Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="i8vnkIYZaw0sJ2aam" cm:name="TransformInflexibleSubmodels" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="idlvwNhIr667t1xOp" cm:class="ps:parents">
+        <cm:relation cm:id="inkBHGgjFs2rCAoqY" cm:type="ps:parent">
+          <cm:target cm:id="iyvQzHZMESgWAvaN3">./i8IB2GBDUVebVlyCv</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="i62D0ZkF0CPGOKcSN" cm:class="ps:children">
+        <cm:relation cm:id="irkenc_HPBN9pWn5l" cm:type="ps:optional">
+          <cm:target cm:id="iONOdNY8WzPj7yW_-">./il4KOCKz91m0od68u</cm:target>
+          <cm:target cm:id="ipVAvyvdV0EokNPQr">./iA-vG2t8uygkxBBTt</cm:target>
+          <cm:target cm:id="ik6X1UK32cNr_03yu">./iSDDmIG6B5kA48a_J</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iYRFNPhjRjp7oodB1" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="io7qP7dgLhN8FKorr" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ipyCTd6TPCuQGztz2" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i-_I0j0if_Z69JDJw" cm:type="ps:datetime">2022-07-28T12:28:04.487Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iv5T7ogKtEFgqhChV" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iibe4z0thoF-W8DgP" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iv7VyVMIpj-teNh4n" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iNaE7a75Op_722Fen" cm:type="ps:datetime">2022-07-28T12:32:26.546Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="ifeTYZLL0iSW-_ods" cm:name="TransformInstances" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iMfZwlFOmKhCdJskP" cm:class="ps:parents">
+        <cm:relation cm:id="iA5w_roNnd_Z6cDmP" cm:type="ps:parent">
+          <cm:target cm:id="ilv5xmbVGzqKkVXav">./i8IB2GBDUVebVlyCv</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="iqi0VkgfF91GSdvol" cm:class="ps:children">
+        <cm:relation cm:id="iBcoC4wjVmFSYa8g9" cm:type="ps:mandatory">
+          <cm:target cm:id="iqb0e31KRC0W2H8kS">./i2a2xTi8In27jgpBN</cm:target>
+          <cm:target cm:id="iDjrlXNVoBpVd0cVI">./i4mmTUxanApK329x7</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="i0pEWKHEPwe1mrkJD" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iFViPXqIOEAtBMvre" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="itWTbGoossFgtGm7m" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i6GcJpWPVWPZ5POZv" cm:type="ps:datetime">2022-07-28T12:29:05.742Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i6kCA6H0t1SmelgNo" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="ihShZcEm5u1oEsIWw" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iOriNVR3Dk7bfgNS6" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="ip6xSxSHmeZJrMwR8" cm:type="ps:datetime">2022-07-28T12:29:18.267Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="i7FVEtXTUtObjQQNo" cm:name="BasicStructure" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="izdMw6Vpk_dyP4HhE" cm:class="ps:parents">
+        <cm:relation cm:id="iHvGgNdbAko7cwpIA" cm:type="ps:parent">
+          <cm:target cm:id="isXZN1lJ1ZbQKG0NV">./i8IB2GBDUVebVlyCv</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="i464vpT0uF5DVAALH" cm:class="ps:children">
+        <cm:relation cm:id="iO-kjAJdAe5iwbSgi" cm:type="ps:mandatory">
+          <cm:target cm:id="iePcfwhc97JrBvcgP">./i3mj23raxHB76F3Oc</cm:target>
+          <cm:target cm:id="i1oWRLK2zWUkIdOOz">./iEc3TB4EwE7pTIzpi</cm:target>
+          <cm:target cm:id="ivY32t-zaKJoZBd4I">./i3i_5ih8t8Q2CsP5O</cm:target>
+          <cm:target cm:id="iwsjVO9YzWczwNuI8">./iEt4z42ZqgCW7_wga</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="igZR4jrIl8qdFGrBh" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="ij3iQoJvnChXWBfZC" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i6PhZvLap0g62kHqi" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iHRVqRAQC2asSGJYf" cm:type="ps:datetime">2022-07-28T12:30:14.749Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iDD3Mx7dppu8oas7F" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="i62vCXMtOrNhisF9P" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iJ-47ahO0iyJEpxY6" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iPbnf-B90S7qp6teS" cm:type="ps:datetime">2022-07-28T12:30:14.749Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iNCF1FzZDON0LTit6" cm:name="TransformFlexibleSubmodels" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="i5hFlBck1-d5gwusE" cm:class="ps:parents">
+        <cm:relation cm:id="i3DUh9I7Bn18zi5fZ" cm:type="ps:parent">
+          <cm:target cm:id="i0FdEtAuhexJvfGtJ">./i8IB2GBDUVebVlyCv</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="iKvboMaodTFJ2kmHG" cm:class="ps:children">
+        <cm:relation cm:id="iZx-QoQyoXFWnasN_" cm:type="ps:mandatory" cm:range="n">
+          <cm:target cm:id="izXROHnP7znw3ksyi">./iGONoxkCb8b9AAiY8</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="i3gFmEyfX6eAk7F-0" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="i22dCL6AeHQTrCT-Y" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i1y8b4UPsZX_Uysrn" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iJMNigpYm7zH_4lUw" cm:type="ps:datetime">2022-07-28T12:32:39.500Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iJix2SD6qcrwI-FCg" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="ioaMI32Prxd3drI6x" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ifm-VX6pTpt1N3kTI" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iWpDjf3aohz1krOWD" cm:type="ps:datetime">2024-10-21T07:23:50.699Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iGONoxkCb8b9AAiY8" cm:name="FlexibleSubmodelReference" cm:type="ps:variant" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iFzynb5tjZgTCG2HV" cm:class="ps:parents">
+        <cm:relation cm:id="irDWTVP8IcPLmoXoY" cm:type="ps:parent">
+          <cm:target cm:id="isKxBRJPLhN_W6X0z">./iNCF1FzZDON0LTit6</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="itoy07n-jdgoZ22G4" cm:type="ps:string" cm:invisible="true" cm:readonly="true" cm:name="ps:vdmid">
+          <cm:constant cm:id="iFjEOAszX7LxjSfMM" cm:type="ps:string">is1Dw5EWJHYWrTKZN</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iFPXyZ3Q51UZwm0g6" cm:type="ps:path" cm:invisible="true" cm:readonly="true" cm:name="ps:vdmpath">
+          <cm:constant cm:id="i6CHPW8BnDMhqeihW" cm:type="ps:path">$(PROJECT:AcceptanceTestModel)/SubmodelsConfigSpaces/SomeSubmodel_CS/VariantOfSomeSubmodel.vdm</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ilECrJia43Awa1yGE" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iHMY4XYt0wVoFMo_S" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i52lzavCzIg0z0yTE" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="imZTVnw7vRCTDPzD2" cm:type="ps:datetime">2022-07-28T12:33:50.942Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="itn2eOdUrIkPXt4ZI" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="i3AWzu4I94ANkvUym" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ih-jmeVASG3ufA02v" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i_8K3IXp2ff5MgotX" cm:type="ps:datetime">2024-10-21T07:23:50.699Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="id1ZTe_h6_4j4k7nO" cm:name="TransformNestedInstances" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="i1JYeQuU-cT4huv9d" cm:class="ps:parents">
+        <cm:relation cm:id="iO1RBVDjfmFVBoTwH" cm:type="ps:parent">
+          <cm:target cm:id="iaws9tLfSYKcmtfY0">./i8IB2GBDUVebVlyCv</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="iYelKrH_sRAbSHs-l" cm:class="ps:children">
+        <cm:relation cm:id="i7E96kCo21wJb6GBq" cm:type="ps:optional" cm:range="[0,n]">
+          <cm:target cm:id="iwWjtXNYlmz9tdOzJ">./imYMTdCMCWwLdzz3p</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iSvS2CYaPINg92zjV" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iiYlbIdC4Xo5uMAb-" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iux7EcioRQpcgduvi" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iRoJq28Xo1hNrA1VD" cm:type="ps:datetime">2022-08-02T12:11:37.388Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iHtyF7ozzUGS1fD2A" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="i4dcJ2sMmybq2thDz" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iLBmRJBmxdsi2xcuk" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iJd-VMbSid4K7tpYV" cm:type="ps:datetime">2022-08-02T12:27:46.988Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="imYMTdCMCWwLdzz3p" cm:name="OuterConfigSpaceReference" cm:type="ps:instance" cm:class="ps:feature" cm:default="off">
+      <cm:relations cm:id="i3o6_-mGJrSlr2raE" cm:class="ps:parents">
+        <cm:relation cm:id="ivx3xs0FnNimtX7R4" cm:type="ps:parent">
+          <cm:target cm:id="iaM-2jrQ3eCE39hHE">./id1ZTe_h6_4j4k7nO</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iepPSAt3JzOQE21Vn" cm:type="ps:string" cm:invisible="true" cm:fixed="true" cm:readonly="true" cm:name="ps:configspaceid">
+          <cm:constant cm:id="itxt1UIvE8eCWD5Zx" cm:type="ps:string">iPBTn1GSyiCTi75oJ</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ix-floCJd44ctwv79" cm:type="ps:path" cm:invisible="true" cm:fixed="true" cm:readonly="true" cm:name="ps:configspacepath">
+          <cm:constant cm:id="ic6kHgXbEMrQnt83Q" cm:type="ps:path">$(PROJECT:AcceptanceTestModel)/InstancesConfigSpaces/OuterModel_CS/configspace.xml</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i7l--O00SLgauZtyU" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iyqkNp4Wj6i9PCIvm" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iPqlP_eA7JbxALhX1" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iDk_-jSEnkbvE9u4H" cm:type="ps:datetime">2022-08-02T12:27:46.988Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iwN-Q3r_hJaXhVg4a" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iP8JzNN7kIpGO9Sxs" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ibWTI2zPDqGE-WuF7" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i-m_7geKwkEcLEU-F" cm:type="ps:datetime">2022-08-05T14:12:24.928Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="i6dAHDBF6BCqOk6Pp" cm:name="RelationsExamples" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="i1mznsP7BNyHbD-vf" cm:class="ps:parents">
+        <cm:relation cm:id="iYJaucXelcS4HShIe" cm:type="ps:parent">
+          <cm:target cm:id="iH8WvGabBOxEyHRuh">./i8IB2GBDUVebVlyCv</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="ikrbNc8vc6FxpeYoN" cm:class="ps:children">
+        <cm:relation cm:id="i8_A8nXJ-cwItKK3e" cm:type="ps:optional" cm:range="[0,n]">
+          <cm:target cm:id="i9tjwRe6WDflEznFy">./i0gfxdW0OBaXa7wD0</cm:target>
+          <cm:target cm:id="i5Bh5yVzjSgJnimrT">./i-AsTJYRw9RmK7DOK</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="izCCTiaVu3te0yDOk" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iUL14Zl-Spk-8wm93" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iebpas67zWA8RslXQ" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ikoCKDcQYGKhnNOfP" cm:type="ps:datetime">2025-03-28T16:50:42.872Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i2l5fTQEvhZl6Dpzn" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="i17LzIQODr7abS5tq" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i_lKqWu7UQe2_R0pf" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iTfJIYcoSuTyJUfy_" cm:type="ps:datetime">2025-03-28T19:29:28.092Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="i0gfxdW0OBaXa7wD0" cm:name="FeatureWithRelationToSomeLocalFeature" cm:type="ps:feature" cm:class="ps:feature">
+      <cm:relations cm:id="isB2EEhc1_JgcxJvP" cm:class="ps:parents">
+        <cm:relation cm:id="iqZot7YEEmkbM8SOr" cm:type="ps:parent">
+          <cm:target cm:id="igvMuv4qofi9iJMhy">./i6dAHDBF6BCqOk6Pp</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="iCIbqCBYAwagogyC5" cm:class="ps:dependencies">
+        <cm:relation cm:id="iIYbLZT1guQACIzzL" cm:type="ps:requires">
+          <cm:target cm:id="iQ-tuFpEH9Ivyppkd">iHvvVt224NepEaiPb/i-AsTJYRw9RmK7DOK</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="ijaEa-npxCsiOQAN1" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iJEblkWmZDHfoBxki" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iBYKmF8peDytwJ09T" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ixXFDkfvDNk7ERvWh" cm:type="ps:datetime">2025-03-28T16:52:47.028Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ibeuk4IBUeSQo8lrw" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iG8uUAYufxt1UdRCU" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i-vneWmwmR-w4o1FG" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iENzHiDbUtQzlovB9" cm:type="ps:datetime">2025-03-28T19:25:36.186Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="i-AsTJYRw9RmK7DOK" cm:name="SomeLocalFeature" cm:type="ps:feature" cm:class="ps:feature" cm:default="off">
+      <cm:relations cm:id="ivtApQW1QmbLnIE24" cm:class="ps:parents">
+        <cm:relation cm:id="iBJMbv2Ly8z42kBWP" cm:type="ps:parent">
+          <cm:target cm:id="i3jDrH8c0BW9LDkW0">./i6dAHDBF6BCqOk6Pp</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="ibU509dj4bEv_-eeb" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="iBox6Dq0tAVh1zCxS" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i8xU0scwufOiCs0sE" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="i0kPNA6UHOS32q-Rj" cm:type="ps:datetime">2025-03-28T16:53:14.282Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iWrcITqQzciQLMJVr" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="izcGMcfs1Xnj7u8EF" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i8K1wDnVRiLAdov__" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iOIUTBp6XNYl9flfZ" cm:type="ps:datetime">2025-03-28T17:08:53.984Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="ipINKL0EVtuZMDZ-5" cm:name="RestrictionsExamples" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iaxQlQkoFquAYKMlv" cm:class="ps:parents">
+        <cm:relation cm:id="iEiqxPRLqI4zm9iU2" cm:type="ps:parent">
+          <cm:target cm:id="iibI2FKmVHoxeT0x2">./i8IB2GBDUVebVlyCv</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:relations cm:id="ipC41UeSbYxwMphY0" cm:class="ps:children">
+        <cm:relation cm:id="itVwjkTOOHoVhyXO3" cm:type="ps:optional" cm:range="[0,n]">
+          <cm:target cm:id="im0hEgb1JzpPIwYEB">./iNz-9kSaE8RxzvO8o</cm:target>
+          <cm:target cm:id="iKw6VVVtTkKh_xBMw">./ixV7JtwsQdgtDE0sx</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iMXWItlgiMHo1luiQ" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="ic5bXyS13G-EJZOmO" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iCZC-oGYMt3o6L6Lm" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iTExKHMPNwqge98I4" cm:type="ps:datetime">2025-03-28T19:24:33.569Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="itiONhwi7fY1aHY6W" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iSf8SCp1orx6D_q_R" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="i8bdGv-_K3B7QWurw" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iLwXCUCPPngLzg4ua" cm:type="ps:datetime">2025-03-28T19:25:29.284Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="iNz-9kSaE8RxzvO8o" cm:name="AnotherLocalFeature" cm:type="ps:feature" cm:class="ps:feature">
+      <cm:relations cm:id="ic4d9G5VIlAJfitu5" cm:class="ps:parents">
+        <cm:relation cm:id="ildeQS2S-SYX9U6Wr" cm:type="ps:parent">
+          <cm:target cm:id="iKLXXoZ-DTJn0838h">./ipINKL0EVtuZMDZ-5</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iUTmsS4cjFZ8rns3R" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="i1yCBVgZXdqB2wx0k" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ivdYU_m987j2LOEs6" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iKlt3IIbf6QZCodfe" cm:type="ps:datetime">2025-03-28T19:25:07.397Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iNn5umypfv-ZEnYac" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iKXtA5tuj_kM3C6e4" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iWv7pL7OIDZGX3gDH" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i4PrTzR03kyEldagj" cm:type="ps:datetime">2025-03-28T19:25:07.397Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="ixV7JtwsQdgtDE0sx" cm:restriction="iS2FA_p-SCpbcSjQz" cm:name="FeatureWithRestrictionToAnotherLocalFeature" cm:type="ps:feature" cm:class="ps:feature" cm:default="off">
+      <cm:relations cm:id="iTMh9PXRSiriag7dF" cm:class="ps:parents">
+        <cm:relation cm:id="i8S5g4TYeHFvh1lXe" cm:type="ps:parent">
+          <cm:target cm:id="ivmxXBiJAN7quEVcz">./ipINKL0EVtuZMDZ-5</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iW9tJJcovazixMM_5" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="ipi6l79wkKy_k1OCB" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iKaFYaXJwMLTHzg7n" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="iT39-rJfGtiqSqz4Q" cm:type="ps:datetime">2025-03-28T19:25:29.284Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ibNUupMvNrRLGJ8h3" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="igeMuqT6kqRF144GJ" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ifa7IMy-Rb-eYVfQD" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="iHuyNZmRPVD2_jPam" cm:type="ps:datetime">2025-03-28T19:26:53.051Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+  </cm:elements>
+</cm:consulmodel>

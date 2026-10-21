@@ -1,0 +1,113 @@
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>de.itemis.purevariants.exporter</groupId>
+		<artifactId>de.itemis.purevariants.exporter.tests</artifactId>
+		<version>3.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>de.itemis.purevariants.exporter</groupId>
+	<artifactId>de.itemis.purevariants.exporter.exporter.it.test</artifactId>
+	<version>3.0.1-SNAPSHOT</version>
+	<packaging>eclipse-test-plugin</packaging>
+
+	<properties>
+		<!-- The integration tests need a licensed pure::variants. They are skipped unless
+		     a floating license server is given: -Dpurevariants.license.server=<url>
+		     (see the profile integration-tests below and CONTRIBUTING.md) -->
+		<skipITs>true</skipITs>
+		<purevariants.license.server></purevariants.license.server>
+		<pluginCustomization>${project.build.directory}/plugin_customization.ini</pluginCustomization>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<version>3.3.1</version>
+				<executions>
+					<execution>
+						<id>license-server-preference</id>
+						<phase>pre-integration-test</phase>
+						<goals>
+							<goal>copy-resources</goal>
+						</goals>
+						<configuration>
+							<skip>${skipITs}</skip>
+							<outputDirectory>${project.build.directory}</outputDirectory>
+							<resources>
+								<resource>
+									<directory>license</directory>
+									<filtering>true</filtering>
+								</resource>
+							</resources>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-surefire-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<skip>${skipITs}</skip>
+					<useUIHarness>false</useUIHarness>
+					<!-- The local pure::variants server is started from the bundle directory -->
+					<explodedBundles>
+						<bundle>com.ps.consul.eclipse.core.linux</bundle>
+						<bundle>com.ps.consul.eclipse.core.macos</bundle>
+						<bundle>com.ps.consul.eclipse.core.win32</bundle>
+					</explodedBundles>
+					<!-- Sets the license server as default preference of pure::variants -->
+					<argLine>${os-jvm-flags} "-Declipse.pluginCustomization=${pluginCustomization}"</argLine>
+					<!-- Safeguard in case pure::variants waits for user input, e.g. a license dialog -->
+					<forkedProcessTimeoutInSeconds>1800</forkedProcessTimeoutInSeconds>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>integration-tests</id>
+			<activation>
+				<property>
+					<name>purevariants.license.server</name>
+				</property>
+			</activation>
+			<properties>
+				<skipITs>false</skipITs>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.eclipse.tycho</groupId>
+						<artifactId>target-platform-configuration</artifactId>
+						<version>${tycho.version}</version>
+						<configuration>
+							<dependency-resolution>
+								<extraRequirements>
+									<!-- The complete pure::variants installation. Besides the bundles the
+									     tests require directly, pure::variants needs its local server
+									     (com.ps.consul.eclipse.core.<os>) and the floating license support
+									     (com.ps.consul.eclipse.ui.float), which nothing requires directly.
+									     Only needed to run the tests, so it is not resolved in a build
+									     without integration tests. -->
+									<requirement>
+										<type>eclipse-feature</type>
+										<id>com.ps.consul.eclipse.purevariants.de.enterprise</id>
+										<versionRange>0.0.0</versionRange>
+									</requirement>
+								</extraRequirements>
+							</dependency-resolution>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>

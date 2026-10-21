@@ -1,0 +1,18 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>de.itemis.purevariants.exporter</groupId>
+    <artifactId>de.itemis.purevariants.exporter.features</artifactId>
+    <version>3.0.1-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+	<parent>
+		<groupId>de.itemis.purevariants.exporter</groupId>
+		<artifactId>de.itemis.purevariants.exporter.root</artifactId>
+		<version>3.0.1-SNAPSHOT</version>
+	</parent>
+
+    <modules>
+        <module>de.itemis.purevariants.exporter.feature</module>
+        <module>de.itemis.purevariants.jaxb.libraries.feature</module>
+    </modules>
+</project>

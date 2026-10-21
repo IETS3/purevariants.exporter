@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="de.itemis.purevariants.exporter.exporter.commands.category"
+            name="IETS3 Category">
+      </category>
+      <command
+            categoryId="de.itemis.purevariants.exporter.exporter.commands.category"
+            name="IETS3 Export Command"
+            id="de.itemis.purevariants.exporter.exporter.commands.exporterCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="de.itemis.purevariants.exporter.exporter.plugin.Iets3ExportHandler"
+            commandId="de.itemis.purevariants.exporter.exporter.commands.exporterCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="de.itemis.purevariants.exporter.exporter.toolbars.iets3Toolbar">
+            <command
+                  id="de.itemis.purevariants.exporter.exporter.toolbars.iets3Command"
+                  commandId="de.itemis.purevariants.exporter.exporter.commands.exporterCommand"
+                  icon="icons/iets3.png"
+                  tooltip="iets3 export">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>

@@ -1,0 +1,13 @@
+# Ignore Folders
+**/bin/
+**/lib/
+**/xtend-gen/
+**/src-gen/
+**/target/
+
+# Ignore Files
+**/.DS_Store
+*.jar
+*.log
+*.zip
+

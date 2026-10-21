@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+	<extension point="org.eclipse.ui.newWizards">
+		<category id="de.itemis.purevariants.exporter.ui.Examples"
+			name="IETS3 Examples"
+			parentCategory="org.eclipse.ui.Examples" />
+	</extension>
+
+	<!-- ========= de.itemis.purevariants.exporter.AcceptanceTestModel ========= -->
+	<extension point="org.eclipse.ui.newWizards">
+		<wizard id="de.itemis.purevariants.exporter.example.AcceptanceTestModel"
+			name="Example Model for Acceptance Test"
+			class="org.eclipse.emf.common.ui.wizard.ExampleInstallerWizard"
+			category="org.eclipse.ui.Examples/de.itemis.purevariants.exporter.ui.Examples"
+			icon="icons/genproject.gif"
+			project="true">
+			<description>Sample model containing different modeling features to test the export.</description>
+		</wizard>
+	</extension>
+	<extension point="org.eclipse.emf.common.ui.examples">
+		<example wizardID="de.itemis.purevariants.exporter.example.AcceptanceTestModel" pageImage="icons/genproject.gif">
+			<projectDescriptor name="AcceptanceTestModel" contentURI="contents/AcceptanceTestModel.zip" description="Sample model containing different modeling features to test the export."/>
+			<fileToOpen location="AcceptanceTestModel/MainModelConfigSpace/MainVariant.vdm"/>
+		</example>
+	</extension>
+</plugin>

@@ -1,0 +1,66 @@
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.itemis.purevariants.exporter</groupId>
+	<artifactId>de.itemis.purevariants.exporter.tests</artifactId>
+	<version>3.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<parent>
+		<groupId>de.itemis.purevariants.exporter</groupId>
+		<artifactId>de.itemis.purevariants.exporter.root</artifactId>
+		<version>3.0.1-SNAPSHOT</version>
+	</parent>
+
+	<modules>
+		<module>de.itemis.purevariants.exporter.exporter.it.test</module>
+		<module>de.itemis.purevariants.exporter.exporter.test</module>
+		<module>de.itemis.purevariants.exporter.tests.report</module>
+	</modules>
+	<properties>
+		<os-jvm-flags></os-jvm-flags>
+	</properties>
+	<profiles>
+		<profile>
+			<id>macosx-jvm-flags</id>
+			<activation>
+				<os>
+					<family>mac</family>
+				</os>
+			</activation>
+			<properties>
+				<os-jvm-flags>-XstartOnFirstThread</os-jvm-flags>
+			</properties>
+			<build>
+				<pluginManagement>
+					<plugins>
+						<plugin>
+							<groupId>org.eclipse.tycho</groupId>
+							<artifactId>target-platform-configuration</artifactId>
+							<configuration>
+								<environments combine.children="append">
+									<environment>
+										<os>macosx</os>
+										<ws>cocoa</ws>
+										<arch>aarch64</arch>
+									</environment>
+								</environments>
+								<dependency-resolution>
+									<extraRequirements>
+										<requirement>
+											<type>eclipse-plugin</type>
+											<id>org.eclipse.jdt.launching.macosx</id>
+											<versionRange>1.0.0</versionRange>
+										</requirement>
+									</extraRequirements>
+								</dependency-resolution>
+							</configuration>
+						</plugin>
+					</plugins>
+				</pluginManagement>
+			</build>
+		</profile>
+	</profiles>
+</project>

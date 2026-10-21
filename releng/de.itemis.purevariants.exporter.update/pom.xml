@@ -1,0 +1,76 @@
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>de.itemis.purevariants.exporter</groupId>
+		<artifactId>de.itemis.purevariants.exporter.releng</artifactId>
+		<version>3.0.1-SNAPSHOT</version>
+	</parent>
+
+	<artifactId>de.itemis.purevariants.exporter.update</artifactId>
+	<version>3.0.1-SNAPSHOT</version>
+	<packaging>eclipse-repository</packaging>
+
+	<properties>
+		<nexus.url>https://artifacts.itemis.cloud</nexus.url>
+		<p2.repository.root>p2-private</p2.repository.root>
+		<p2.repository.name>purevariants.exporter</p2.repository.name>
+		<!-- Target folder below ${p2.repository.name}. By default each build gets its own
+		     folder, e.g. snapshots/3.0.1.202610151542 (version + build qualifier/timestamp).
+		     For a release: -Dp2.repository.stream=releases/<version> -->
+		<p2.repository.stream>snapshots/${unqualifiedVersion}.${buildQualifier}</p2.repository.stream>
+		<!-- the update site is uploaded by the wagon-maven-plugin below, not as a Maven artifact -->
+		<maven.deploy.skip>true</maven.deploy.skip>
+		<serverId>artifacts.itemis</serverId>
+
+		<!-- Deploy target. For a local test deploy, override on the command line
+		     (see CONTRIBUTING.md): -Drepository.url=file:///tmp/p2 -Dprotocol=wagon-file -->
+		<repository.url>${nexus.url}/repository/${p2.repository.root}</repository.url>
+		<protocol>wagon-http</protocol>
+	</properties>
+
+	<distributionManagement>
+		<repository>
+			<id>${serverId}</id>
+			<url>${repository.url}</url>
+		</repository>
+	</distributionManagement>
+
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.wagon</groupId>
+				<artifactId>${protocol}</artifactId>
+				<version>3.3.3</version>
+			</extension>
+		</extensions>
+
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>wagon-maven-plugin</artifactId>
+				<version>2.0.0</version>
+				<executions>
+					<execution>
+						<id>upload-repository</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>upload</goal>
+						</goals>
+						<configuration>
+							<fromDir>${basedir}/target/repository</fromDir>
+							<includes>*/**</includes>
+							<toDir>${p2.repository.name}/${p2.repository.stream}</toDir>
+
+							<serverId>${serverId}</serverId>
+							<url>${repository.url}</url>
+
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+</project>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?pde version="3.8"?>
+<target name="purevariants-5-base" sequenceNumber="2">
+	<locations>
+
+		<location includeAllPlatforms="false" includeConfigurePhase="false"
+			includeMode="planner" includeSource="true" type="InstallableUnit">
+			
+			<unit id="org.eclipse.emf.common.ui" version="0.0.0" />
+			<!-- Required by the complete pure::variants enterprise feature, which the
+			     integration tests install (profile integration-tests). Contained in
+			     purevariants-5.target anyway; listed here for -Dpurevariants.p2.url builds. -->
+			<unit id="org.eclipse.gef" version="0.0.0" />
+			<unit id="org.eclipse.wst.jsdt.core" version="0.0.0" />
+			<unit id="org.eclipse.wst.jsdt.ui" version="0.0.0" />
+			<unit id="org.eclipse.jdt.feature.group" version="0.0.0" />
+			<unit id="org.eclipse.platform.feature.group" version="0.0.0" />
+			<unit id="org.eclipse.pde.feature.group" version="0.0.0" />
+			<unit id="org.junit.jupiter.api" version="0.0.0" />
+			<unit id="org.junit.jupiter.engine" version="0.0.0" />
+			<unit id="org.junit.jupiter.params" version="0.0.0" />
+			<unit id="org.junit.platform.commons" version="0.0.0" />
+			<unit id="org.junit.platform.engine" version="0.0.0" />
+			<unit id="org.junit.platform.launcher" version="0.0.0" />
+			<unit id="org.junit.platform.runner" version="0.0.0" />
+			<unit id="org.junit.platform.suite.api" version="0.0.0" />
+			<unit id="org.junit.platform.suite.commons" version="0.0.0" />
+			
+			<repository
+				location="https://download.eclipse.org/releases/2022-03/202203161000" />
+		</location>
+
+		<location includeAllPlatforms="false" includeConfigurePhase="false"
+			includeMode="planner" includeSource="true" type="InstallableUnit">
+			<unit id="org.opentest4j" version="0.0.0" />
+			
+			<repository
+				location="https://download.eclipse.org/tools/orbit/simrel/orbit-aggregation/2024-12" />
+
+		</location>
+
+		<location includeAllPlatforms="false" includeConfigurePhase="false"
+			includeMode="planner" includeSource="true" type="InstallableUnit">
+			
+			<unit id="jakarta.xml.bind" version="2.3.3.v20201118-1818" />
+			<unit id="com.sun.xml.bind" version="2.3.3.v20201118-1818" />
+			<unit id="javax.activation" version="1.2.2.v20201119-1642" />
+
+			<repository
+				location="https://download.eclipse.org/releases/2022-03/202203161000" />
+		</location>
+
+		<location includeAllPlatforms="false" includeConfigurePhase="false"
+			includeMode="planner" includeSource="true" type="InstallableUnit">
+			
+			<unit id="org.assertj" version="3.20.2.v20210706-1104" />
+
+			<repository
+				location="https://download.eclipse.org/tools/orbit/downloads/drops/R20220302172233/repository" />
+		</location>
+
+	</locations>
+</target>

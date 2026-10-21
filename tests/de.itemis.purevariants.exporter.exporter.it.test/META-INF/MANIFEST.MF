@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: de.itemis.purevariants.exporter.exporter.it.test
+Bundle-SymbolicName: de.itemis.purevariants.exporter.exporter.it.test
+Bundle-Vendor: itemis AG
+Bundle-Version: 3.0.1.qualifier
+Automatic-Module-Name: de.itemis.purevariants.exporter.exporter.it.test
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Require-Bundle: org.assertj,
+ org.eclipse.core.net,
+ org.eclipse.core.resources,
+ org.eclipse.core.runtime,
+ org.eclipse.ui,
+ com.ps.consul.eclipse.core,
+ com.ps.consul.eclipse.purevariants.enterprise,
+ de.itemis.purevariants.exporter.exporter
+Import-Package: com.sun.xml.bind,
+ javax.xml.bind,
+ javax.xml.bind.annotation,
+ org.junit.jupiter.api
+

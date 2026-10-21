@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <feature url="features/de.itemis.purevariants.exporter.feature_3.0.1.qualifier.jar" id="de.itemis.purevariants.exporter.feature" version="3.0.1.qualifier">
+      <category name="Iets3Category"/>
+   </feature>
+   <category-def name="Iets3Category" label="IETS3 Plugins">
+      <description>
+         Provide extensions for pure::variants to support integration with IETS3.Variability
+      </description>
+   </category-def>
+</site>

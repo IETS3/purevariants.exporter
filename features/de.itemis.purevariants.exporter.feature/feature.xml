@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="de.itemis.purevariants.exporter.feature"
+      label="%featureName"
+      version="3.0.1.qualifier"
+      provider-name="%providerName">
+
+   <description>
+      %description
+   </description>
+
+   <copyright>
+      %copyright
+   </copyright>
+
+   <license url="https://www.eclipse.org/legal/epl-2.0/">
+      %license
+   </license>
+
+   <includes
+         id="de.itemis.purevariants.jaxb.libraries.feature"
+         version="3.0.1.qualifier"/>
+
+   <plugin
+         id="de.itemis.purevariants.exporter.exporter"
+         download-size="0"
+         install-size="0"
+         version="3.0.1.qualifier"
+         unpack="false"/>
+
+   <plugin
+         id="de.itemis.purevariants.exporter.examples"
+         download-size="0"
+         install-size="0"
+         version="3.0.1.qualifier"
+         unpack="false"/>
+
+</feature>

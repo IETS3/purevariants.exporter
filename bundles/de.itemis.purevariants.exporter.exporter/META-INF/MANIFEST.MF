@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Exporter
+Bundle-SymbolicName: de.itemis.purevariants.exporter.exporter;singleton:=true
+Bundle-Version: 3.0.1.qualifier
+Bundle-Activator: de.itemis.purevariants.exporter.exporter.plugin.Activator
+Bundle-Vendor: itemis AG
+Bundle-License: EPL-2.0;link="https://www.eclipse.org/legal/epl-2.0/"
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ org.eclipse.core.resources,
+ com.ps.consul.eclipse.core,
+ com.ps.consul.eclipse.purevariants.enterprise
+Bundle-RequiredExecutionEnvironment: JavaSE-11
+Automatic-Module-Name: de.itemis.purevariants.exporter.exporter
+Bundle-ActivationPolicy: lazy
+Export-Package: de.itemis.purevariants.exporter.exporter,
+ de.itemis.purevariants.exporter.model
+Import-Package: com.sun.xml.bind.v2;version="2.3.3",
+ javax.xml.bind;version="2.3.3",
+ javax.xml.bind.annotation;version="2.3.3"

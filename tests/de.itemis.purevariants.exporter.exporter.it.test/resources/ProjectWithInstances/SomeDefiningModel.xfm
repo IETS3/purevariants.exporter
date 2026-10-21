@@ -1,0 +1,65 @@
+<cm:consulmodel xmlns:cm="http://www.pure-systems.com/consul/model" cm:id="ixkMAKqleIA-ncrxy" cm:version="1.7" cm:type="ps:fm">
+  <cm:head>
+    <cm:properties>
+      <cm:property cm:id="iP3iCgNdwH4XOIWSg" cm:type="ps:string" cm:invisible="true" cm:name="ps:name">
+        <cm:constant cm:id="iKt8-RMW0-yjs8mxM" cm:type="ps:string">SomeDefiningModel</cm:constant>
+      </cm:property>
+      <cm:property cm:id="i53bVNKS7AwarTJXQ" cm:type="ps:string" cm:invisible="true" cm:name="ps:author">
+        <cm:constant cm:id="im_n1UIh8Mf1SpAgh" cm:type="ps:string">johndoe</cm:constant>
+      </cm:property>
+      <cm:property cm:id="iRF8zhfxOB7oHfcPU" cm:type="ps:string" cm:invisible="true" cm:name="ps:version">
+        <cm:constant cm:id="i8si-CANV6lJaQCqa" cm:type="ps:string">1.0</cm:constant>
+      </cm:property>
+      <cm:property cm:id="i5dk30xda8m5Sgh3x" cm:type="ps:datetime" cm:invisible="true" cm:name="ps:created">
+        <cm:constant cm:id="iUxc4I4U1hQESOeQf" cm:type="ps:datetime">2024-10-08T09:13:59.135Z</cm:constant>
+      </cm:property>
+      <cm:property cm:id="i4lfoJcmDMu7SPpc8" cm:type="ps:mimetype" cm:invisible="true" cm:name="ps:DescriptionType">
+        <cm:constant cm:id="id1qkd1x2csKykvJf" cm:type="ps:mimetype">text/html</cm:constant>
+      </cm:property>
+    </cm:properties>
+  </cm:head>
+  <cm:elements cm:rootid="iKQSZjDYDe2A7mWdB">
+    <cm:element cm:id="iKQSZjDYDe2A7mWdB" cm:name="SomeDefiningModel" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iFKrsI-Wpjhc7mZ6_" cm:class="ps:children">
+        <cm:relation cm:id="i4C8wMGo6uNn14A-a" cm:type="ps:mandatory">
+          <cm:target cm:id="ikGZHcAM7ceWYM_nH">./ixHYiqIYv4YltzYTW</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iTTnR5M8s8DFJVbOs" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="igrcjjYMaq9Xg11kF" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iU7nvEdueGCozVsEq" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ixCc3HWUtWHtOyCRu" cm:type="ps:datetime">2024-10-08T09:13:59.135Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="ihr1-KbhS2pymW5nr" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iIsDkC-fHNomUJnUt" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iBSIV2TW-uP8az9ls" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="i-kaCXQgjGLRIuRTF" cm:type="ps:datetime">2024-10-08T09:14:17.912Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+    <cm:element cm:id="ixHYiqIYv4YltzYTW" cm:name="FeatureInSomeDefiningModel" cm:type="ps:feature" cm:class="ps:feature" cm:default="on">
+      <cm:relations cm:id="iZjQroa4I28uFbdhe" cm:class="ps:parents">
+        <cm:relation cm:id="ifiKsrVRNPvObOq7V" cm:type="ps:parent">
+          <cm:target cm:id="ipn0e5RMmYEnVJTto">./iKQSZjDYDe2A7mWdB</cm:target>
+        </cm:relation>
+      </cm:relations>
+      <cm:properties>
+        <cm:property cm:id="iD4p34IdPZfg9SP4R" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:Source">
+          <cm:constant cm:id="ilJK0gnmf_qlpBZbI" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iaKz49H6GvEkK7JNI" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Created">
+          <cm:constant cm:id="ixrUHeeCxpwUeng-z" cm:type="ps:datetime">2024-10-08T09:14:17.912Z</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iqecZhSXYBjEwqOHu" cm:type="ps:string" cm:fixed="true" cm:readonly="true" cm:name="ps:ChangedBy">
+          <cm:constant cm:id="iHuQgD07LuGNJyKl4" cm:type="ps:string">johndoe</cm:constant>
+        </cm:property>
+        <cm:property cm:id="iXm2noOTe2M_-2oR-" cm:type="ps:datetime" cm:fixed="true" cm:readonly="true" cm:name="ps:Changed">
+          <cm:constant cm:id="idHLOok6wXCZLP-Fy" cm:type="ps:datetime">2024-10-08T09:14:17.912Z</cm:constant>
+        </cm:property>
+      </cm:properties>
+    </cm:element>
+  </cm:elements>
+</cm:consulmodel>

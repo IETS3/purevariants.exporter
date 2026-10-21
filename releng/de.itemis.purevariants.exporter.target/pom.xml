@@ -1,0 +1,13 @@
+<project>
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>de.itemis.purevariants.exporter</groupId>
+		<artifactId>de.itemis.purevariants.exporter.releng</artifactId>
+		<version>3.0.1-SNAPSHOT</version>
+	</parent>
+
+	<groupId>de.itemis.purevariants.exporter</groupId>
+	<artifactId>purevariants-5</artifactId>
+	<version>3.0.1-SNAPSHOT</version>
+	<packaging>eclipse-target-definition</packaging>
+</project>

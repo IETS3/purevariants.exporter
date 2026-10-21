@@ -1,0 +1,24 @@
+<cm:consulmodel xmlns:cm="http://www.pure-systems.com/consul/model" cm:id="iAwnX_IvbuD2S3lU8" cm:version="1.7" cm:type="ps:vdm">
+  <cm:head>
+    <cm:properties>
+      <cm:property cm:id="iqQP6xH1x8kpKUIp7" cm:type="ps:string" cm:invisible="true" cm:name="ps:name">
+        <cm:constant cm:id="iPcUDJpdF4Rb6gUbX" cm:type="ps:string">FirstVariantModel</cm:constant>
+      </cm:property>
+      <cm:property cm:id="i0q3z47FCFKIHfPou" cm:type="ps:string" cm:fixed="true" cm:name="ps:author">
+        <cm:constant cm:id="iH6MwWYz8zcTNHro7" cm:type="ps:string">johndoe</cm:constant>
+      </cm:property>
+      <cm:property cm:id="iY7SquHH0ONgkgZ2A" cm:type="ps:string" cm:invisible="true" cm:name="ps:version">
+        <cm:constant cm:id="iVfzEJgpUg80zs6Ac" cm:type="ps:string">1.0</cm:constant>
+      </cm:property>
+      <cm:property cm:id="iPXrcZA8sQzX8TWdg" cm:type="ps:datetime" cm:invisible="true" cm:name="ps:created">
+        <cm:constant cm:id="i0vuqNLCHP1ZPuvHj" cm:type="ps:datetime">2024-09-25T14:41:21.821Z</cm:constant>
+      </cm:property>
+      <cm:property cm:id="i3myWLS3Kn_370YlW" cm:type="ps:mimetype" cm:invisible="true" cm:name="ps:DescriptionType">
+        <cm:constant cm:id="i2GyCDQblrAliXPGp" cm:type="ps:mimetype">text/html</cm:constant>
+      </cm:property>
+      <cm:property cm:id="iEJzcEZfW0Gb0KVdq" cm:type="ps:string" cm:invisible="true" cm:name="ps:evaluationmode">
+        <cm:constant cm:id="iQGGlMMmHyBP24aG3" cm:type="ps:string">full</cm:constant>
+      </cm:property>
+    </cm:properties>
+  </cm:head>
+</cm:consulmodel>

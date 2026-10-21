@@ -1,0 +1,190 @@
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>de.itemis.purevariants.exporter</groupId>
+	<artifactId>de.itemis.purevariants.exporter.configuration</artifactId>
+	<version>3.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<properties>
+		<configuration-resolver>p2</configuration-resolver>
+		<jacoco.version>0.8.12</jacoco.version>
+		<!-- Jar signing is disabled by default. To sign the jars, pass the URL of a
+		     signing service compatible with the Eclipse CBI jarsigner:
+		     -DjarSignerSkip=false -DjarSignerUrl=<signing service URL> -->
+		<jarSignerSkip>true</jarSignerSkip>
+		<jarSignerVersion>1.3.2</jarSignerVersion>
+		<maven.deploy.skip>true</maven.deploy.skip>
+		<maven.version>3.9.2</maven.version>
+		<maven.clean.version>3.2.0</maven.clean.version>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<tycho.version>2.7.5</tycho.version>
+	</properties>
+
+	<pluginRepositories>
+		<pluginRepository>
+			<id>signing</id>
+			<url>https://repo.eclipse.org/content/repositories/cbi-releases/</url>
+		</pluginRepository>
+	</pluginRepositories>
+
+
+	<build>
+
+
+		<plugins>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-versions-plugin</artifactId>
+				<version>${tycho.version}</version>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-maven-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<extensions>true</extensions>
+			</plugin>
+			<!--Enable the replacement of the SNAPSHOT version in the final product 
+				configuration -->
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>tycho-packaging-plugin</artifactId>
+				<version>${tycho.version}</version>
+				<executions>
+					<execution>
+						<phase>package</phase>
+						<id>package-feature</id>
+						<configuration>
+							<finalName>
+								${project.artifactId}_${unqualifiedVersion}.${buildQualifier}
+							</finalName>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.tycho</groupId>
+				<artifactId>target-platform-configuration</artifactId>
+				<version>${tycho.version}</version>
+				<configuration>
+					<target>
+						<artifact>
+							<groupId>de.itemis.purevariants.exporter</groupId>
+							<artifactId>purevariants-5</artifactId>
+							<version>${project.version}</version>
+						</artifact>
+					</target>
+					<dependency-resolution>
+						<extraRequirements>
+							<requirement>
+								<type>eclipse-plugin</type>
+								<id>org.eclipse.equinox.event</id>
+								<versionRange>0.0.0</versionRange>
+							</requirement>
+						</extraRequirements>
+					</dependency-resolution>
+					<environments>
+						<environment>
+							<os>linux</os>
+							<ws>gtk</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>win32</os>
+							<ws>win32</ws>
+							<arch>x86_64</arch>
+						</environment>
+						<environment>
+							<os>macosx</os>
+							<ws>cocoa</ws>
+							<arch>x86_64</arch>
+						</environment>
+					</environments>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.eclipse.cbi.maven.plugins</groupId>
+				<artifactId>eclipse-jarsigner-plugin</artifactId>
+				<version>${jarSignerVersion}</version>
+				<configuration>
+					<signerUrl>${jarSignerUrl}</signerUrl>
+					<excludeInnerJars>false</excludeInnerJars>
+					<skip>${jarSignerSkip}</skip>
+				</configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>sign</goal>
+						</goals>
+						<phase>package</phase>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>${maven.clean.version}</version>
+				<configuration>
+					<filesets>
+						<fileset>
+							<directory>${project.basedir}/target</directory>
+						</fileset>
+					</filesets>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>${jacoco.version}</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<!-- Resolve pure::variants from another p2 update site instead of the one in
+		     purevariants-5.target: -Dpurevariants.p2.url=<url> (see CONTRIBUTING.md) -->
+		<profile>
+			<id>custom-purevariants-repository</id>
+			<activation>
+				<property>
+					<name>purevariants.p2.url</name>
+				</property>
+			</activation>
+			<repositories>
+				<repository>
+					<id>artifacts.itemis</id>
+					<url>${purevariants.p2.url}</url>
+					<layout>p2</layout>
+				</repository>
+			</repositories>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.eclipse.tycho</groupId>
+						<artifactId>target-platform-configuration</artifactId>
+						<version>${tycho.version}</version>
+						<configuration>
+							<target combine.self="override">
+								<artifact>
+									<groupId>de.itemis.purevariants.exporter</groupId>
+									<artifactId>purevariants-5</artifactId>
+									<version>${project.version}</version>
+									<classifier>purevariants-5-base</classifier>
+								</artifact>
+							</target>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+</project>
