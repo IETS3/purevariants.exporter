@@ -34,6 +34,13 @@ jobs:
             echo "::error::Secrets ARTIFACTS_ITEMIS_USERNAME / ARTIFACTS_ITEMIS_PASSWORD are not available (not configured, or pull request from a fork). The build needs them to resolve the pure::variants SDK."
             exit 1
           fi
+          # Tycho reports a rejected login only as "No repository found"
+          url=https://artifacts.itemis.cloud/repository/p2-private/purevariants/5.0.14/content.xml
+          status=$(curl -s -o /dev/null -w '%{http_code}' -u "$ARTIFACTS_ITEMIS_USERNAME:$ARTIFACTS_ITEMIS_PASSWORD" "$url")
+          if [ "$status" != "200" ]; then
+            echo "::error::Login to the pure::variants p2 repository failed (HTTP $status for $url). Check the secrets ARTIFACTS_ITEMIS_USERNAME / ARTIFACTS_ITEMIS_PASSWORD."
+            exit 1
+          fi
 
       # No Maven cache: ~/.m2/repository also contains the p2 artifacts of the
       # commercial pure::variants SDK, and caches of main can be restored by
