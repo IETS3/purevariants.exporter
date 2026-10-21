@@ -1,0 +1,60 @@
+name: Build
+
+# Builds all bundles and runs the unit tests. The integration tests need a
+# pure::variants license server and are skipped.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # The pure::variants SDK is resolved from the itemis p2 repository, which
+      # requires a login (see CONTRIBUTING.md). Secrets are not available for
+      # pull requests from forks.
+      - name: Check credentials for the pure::variants p2 repository
+        env:
+          ARTIFACTS_ITEMIS_USERNAME: ${{ secrets.ARTIFACTS_ITEMIS_USERNAME }}
+          ARTIFACTS_ITEMIS_PASSWORD: ${{ secrets.ARTIFACTS_ITEMIS_PASSWORD }}
+        run: |
+          if [ -z "$ARTIFACTS_ITEMIS_USERNAME" ] || [ -z "$ARTIFACTS_ITEMIS_PASSWORD" ]; then
+            echo "::error::Secrets ARTIFACTS_ITEMIS_USERNAME / ARTIFACTS_ITEMIS_PASSWORD are not available (not configured, or pull request from a fork). The build needs them to resolve the pure::variants SDK."
+            exit 1
+          fi
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+          server-id: artifacts.itemis
+          server-username: ARTIFACTS_ITEMIS_USERNAME
+          server-password: ARTIFACTS_ITEMIS_PASSWORD
+
+      - name: Build and run unit tests
+        env:
+          ARTIFACTS_ITEMIS_USERNAME: ${{ secrets.ARTIFACTS_ITEMIS_USERNAME }}
+          ARTIFACTS_ITEMIS_PASSWORD: ${{ secrets.ARTIFACTS_ITEMIS_PASSWORD }}
+        run: mvn -B -ntp clean verify
+
+      - name: Upload test reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-reports
+          path: tests/**/target/surefire-reports/
+          if-no-files-found: ignore
