@@ -54,7 +54,9 @@ else:
 
 print("> Integration tests need a pure::variants license server and are not run here.\n")
 
-print("## Coverage (JaCoCo, unit tests)\n")
+print("## Coverage (JaCoCo, unit tests only)\n")
+print("> Only code that runs without a pure::variants license is measured. The exporters and "
+      "the facade need the skipped integration tests, so their 0 % does not mean they are untested.\n")
 csv_files = glob.glob(os.path.join(root, "tests/**/target/site/jacoco-aggregate/jacoco.csv"), recursive=True)
 if not csv_files:
     print("⚠️ No JaCoCo report found.")
