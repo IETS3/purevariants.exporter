@@ -19,6 +19,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    # The p2 credentials are environment secrets, so that the environment's
+    # protection rules decide which runs may read them.
+    environment: p2-private
     steps:
       - uses: actions/checkout@v4
 
