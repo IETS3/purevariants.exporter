@@ -23,6 +23,8 @@
 		<p2.repository.stream>snapshots/${unqualifiedVersion}.${buildQualifier}</p2.repository.stream>
 		<!-- the update site is uploaded by the wagon-maven-plugin below, not as a Maven artifact -->
 		<maven.deploy.skip>true</maven.deploy.skip>
+		<!-- the p2 repository zip is not a jar; the jars inside are signed in their own modules -->
+		<signing.skip>true</signing.skip>
 		<serverId>artifacts.itemis</serverId>
 
 		<!-- Deploy target. For a local test deploy, override on the command line

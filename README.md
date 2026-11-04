@@ -67,7 +67,8 @@ mvn clean verify
 The update site is written to `releng/de.itemis.purevariants.exporter.update/target/repository`.
 The build needs access to a p2 update site of the pure::variants SDK, which is not
 publicly available. See [CONTRIBUTING.md](CONTRIBUTING.md) for the prerequisites,
-how to use your own pure::variants update site, and how to run the tests.
+how to use your own pure::variants update site, how to run the tests, and how to
+sign the plugin with your own certificate.
 
 ## Contributing and support
 

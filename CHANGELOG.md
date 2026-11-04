@@ -7,6 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## Unreleased
 
 ### Added
+- Sign the plugin with your own certificate when building from source: `-Dsigning.keystore=<file> -Dsigning.alias=<alias>` signs all plugin and feature jars with a keystore (see `CONTRIBUTING.md`, "Signing the plugin"). Builds stay unsigned by default. Alternatively, a signing service can be used with `-DjarSignerSkip=false -DjarSignerUrl=<url>`.
 - Build against another pure::variants p2 update site with `-Dpurevariants.p2.url=<url>`; the target platform is split into `purevariants-5-base.target` (public dependencies) and `purevariants-5.target` (base + pure::variants).
 - Integration tests run in the Maven build with `-Dpurevariants.license.server=<url>` (pure::variants floating license server); without it they are compiled but skipped.
 - `CONTRIBUTING.md` (including how to run the tests in the IDE and with Maven) and `CHANGELOG.md`.
