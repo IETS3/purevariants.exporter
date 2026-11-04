@@ -18,7 +18,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-26.04
     # The p2 credentials are environment secrets, so that the environment's
     # protection rules decide which runs may read them.
     environment: p2-private
