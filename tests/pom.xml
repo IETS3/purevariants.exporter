@@ -21,6 +21,8 @@
 	</modules>
 	<properties>
 		<os-jvm-flags></os-jvm-flags>
+		<!-- test plugins are not part of the update site and need no signature -->
+		<signing.skip>true</signing.skip>
 	</properties>
 	<profiles>
 		<profile>

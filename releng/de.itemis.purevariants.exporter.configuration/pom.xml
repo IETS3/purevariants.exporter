@@ -150,6 +150,92 @@
 	</build>
 
 	<profiles>
+		<!-- Sign all plugin and feature jars with your own certificate from a keystore
+		     (see CONTRIBUTING.md, "Signing the plugin"). Activated by:
+		     -Dsigning.keystore=<keystore file> -Dsigning.alias=<key alias>
+		     The keystore password is taken from the environment variable SIGNING_STOREPASS
+		     (or -Dsigning.storepass); the key password defaults to the keystore password
+		     (-Dsigning.keypass). For a PKCS#11 token see CONTRIBUTING.md.
+		     Do not combine with -DjarSignerSkip=false (signing service). -->
+		<profile>
+			<id>sign-with-keystore</id>
+			<activation>
+				<property>
+					<name>signing.keystore</name>
+				</property>
+			</activation>
+			<properties>
+				<signing.skip>false</signing.skip>
+				<signing.storetype>PKCS12</signing.storetype>
+				<signing.storepass>${env.SIGNING_STOREPASS}</signing.storepass>
+				<signing.keypass>${signing.storepass}</signing.keypass>
+				<signing.tsa></signing.tsa>
+				<signing.providerClass></signing.providerClass>
+				<signing.providerArg></signing.providerArg>
+				<signing.jarsigner.version>3.1.0</signing.jarsigner.version>
+			</properties>
+			<build>
+				<plugins>
+					<!-- Fail fast: without a password jarsigner would wait for an interactive
+					     input, i.e. hang the build -->
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-enforcer-plugin</artifactId>
+						<version>3.5.0</version>
+						<executions>
+							<execution>
+								<id>check-signing-configuration</id>
+								<phase>validate</phase>
+								<goals>
+									<goal>enforce</goal>
+								</goals>
+								<configuration>
+									<rules>
+										<requireProperty>
+											<property>signing.alias</property>
+											<message>Signing: set the key alias with -Dsigning.alias=&lt;alias&gt;</message>
+										</requireProperty>
+										<requireProperty>
+											<property>signing.storepass</property>
+											<regex>^(?!\$\{).+</regex>
+											<regexMessage>Signing: set the keystore password in the environment variable SIGNING_STOREPASS (or with -Dsigning.storepass)</regexMessage>
+										</requireProperty>
+									</rules>
+									<fail>true</fail>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-jarsigner-plugin</artifactId>
+						<version>${signing.jarsigner.version}</version>
+						<configuration>
+							<skip>${signing.skip}</skip>
+							<keystore>${signing.keystore}</keystore>
+							<storetype>${signing.storetype}</storetype>
+							<alias>${signing.alias}</alias>
+							<storepass>${signing.storepass}</storepass>
+							<keypass>${signing.keypass}</keypass>
+							<tsa>${signing.tsa}</tsa>
+							<providerClass>${signing.providerClass}</providerClass>
+							<providerArg>${signing.providerArg}</providerArg>
+							<verbose>false</verbose>
+						</configuration>
+						<executions>
+							<execution>
+								<id>sign-keystore</id>
+								<phase>package</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+
 		<!-- Resolve pure::variants from another p2 update site instead of the one in
 		     purevariants-5.target: -Dpurevariants.p2.url=<url> (see CONTRIBUTING.md) -->
 		<profile>
