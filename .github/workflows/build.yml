@@ -18,7 +18,7 @@ concurrency:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     # The p2 credentials are environment secrets, so that the environment's
     # protection rules decide which runs may read them.
     environment: p2-private
@@ -54,8 +54,8 @@ jobs:
           distribution: temurin
           java-version: '17'
           server-id: artifacts.itemis
-          server-username: ARTIFACTS_ITEMIS_USERNAME
-          server-password: ARTIFACTS_ITEMIS_PASSWORD
+          server-username-env-var: ARTIFACTS_ITEMIS_USERNAME
+          server-password-env-var: ARTIFACTS_ITEMIS_PASSWORD
 
       - name: Build and run unit tests
         env:
