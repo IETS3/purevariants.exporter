@@ -63,10 +63,23 @@ jobs:
           ARTIFACTS_ITEMIS_PASSWORD: ${{ secrets.ARTIFACTS_ITEMIS_PASSWORD }}
         run: mvn -B -ntp clean verify
 
+      # Test and coverage summary on the page of the workflow run
+      - name: Test summary
+        if: always()
+        run: python3 .github/scripts/test-summary.py . >> "$GITHUB_STEP_SUMMARY"
+
       - name: Upload test reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: test-reports
           path: tests/**/target/surefire-reports/
+          if-no-files-found: ignore
+
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-report
+          path: tests/de.itemis.purevariants.exporter.tests.report/target/site/jacoco-aggregate/
           if-no-files-found: ignore
